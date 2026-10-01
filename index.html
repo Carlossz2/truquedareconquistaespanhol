@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cómo Reconquistar a Tu Ex con un Simple Truco Mental</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --red: #e53935;
+      --red-dark: #b71c1c;
+      --green: #16a34a;
+      --green-dark: #15803d;
+      --bg: #000;
+      --text: #fff;
+      --muted: #9e9e9e;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Open Sans', Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ---------- Barra superior ---------- */
+    .top-bar {
+      background: linear-gradient(180deg, var(--red) 0%, var(--red-dark) 100%);
+      text-align: center;
+      padding: 10px 16px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: .3px;
+      box-shadow: 0 4px 18px rgba(229, 57, 53, .45);
+    }
+
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* ---------- Headline ---------- */
+    .headline {
+      margin-top: 56px;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 22px;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+
+    .hl {
+      background: var(--red);
+      padding: 0 6px;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 18px;
+      background: var(--red);
+      padding: 5px 12px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .center { text-align: center; }
+
+    /* ---------- Vídeo (VTurb) ---------- */
+    .video-wrap {
+      max-width: 400px;
+      margin: 48px auto 0;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #111;
+    }
+
+    /* Placeholder visível só até o embed do VTurb ser colado */
+    .video-placeholder {
+      aspect-ratio: 9 / 16;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #555;
+      font-size: 14px;
+      border: 2px dashed #333;
+      border-radius: 14px;
+    }
+
+    /* ---------- Contadores ---------- */
+    .stats {
+      margin-top: 18px;
+      text-align: center;
+      font-size: 15px;
+      line-height: 1.9;
+      color: #e0e0e0;
+    }
+
+    .stats strong { color: #fff; }
+
+    .live-dot {
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      margin-right: 6px;
+      border-radius: 50%;
+      background: var(--red);
+      animation: pulse 1.4s infinite;
+      vertical-align: 1px;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .25; }
+    }
+
+    .sound-tip {
+      margin-top: 8px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ---------- Oferta (aparece após o delay) ---------- */
+    .esconder { display: none; }
+
+    .offer {
+      max-width: 440px;
+      margin: 40px auto 0;
+      padding: 28px 20px;
+      text-align: center;
+      border: 1px solid #222;
+      border-radius: 16px;
+      background: #0b0b0b;
+    }
+
+    .offer-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    .price {
+      margin-top: 14px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 1;
+    }
+
+    .price small {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .price-note {
+      margin-top: 6px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .cta {
+      display: block;
+      margin-top: 22px;
+      padding: 18px 16px;
+      background: var(--green);
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      text-transform: uppercase;
+      border-radius: 10px;
+      box-shadow: 0 6px 0 var(--green-dark);
+      animation: bounce 2s infinite;
+    }
+
+    .cta:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--green-dark); }
+
+    @keyframes bounce {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.04); }
+    }
+
+    .secure {
+      margin-top: 14px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ---------- Rodapé ---------- */
+    footer {
+      margin-top: 72px;
+      padding: 24px 16px 32px;
+      border-top: 1px solid #1a1a1a;
+      text-align: center;
+      font-size: 11px;
+      color: #666;
+    }
+
+    @media (min-width: 768px) {
+      .top-bar { font-size: 15px; }
+      .headline { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">⚠️ Este video es privado y puede ser eliminado en cualquier momento.</div>
+
+  <main class="container">
+
+    <h1 class="headline">
+      <span class="hl">Cómo reconquistar a tu ex</span>
+      o a la mujer que amas con un
+      <span class="hl">simple truco mental</span>
+    </h1>
+
+    <div class="center">
+      <span class="badge">Comprobado por +100 mil hombres</span>
+    </div>
+
+    <!-- ===================== VÍDEO VTURB ===================== -->
+    <div class="video-wrap">
+      <!-- COLE AQUI O CÓDIGO EMBED DO VTURB e apague a div .video-placeholder abaixo -->
+
+      <div class="video-placeholder">[ Vídeo VTurb aqui ]</div>
+
+    </div>
+    <!-- ======================================================= -->
+
+    <div class="stats">
+      <div><span class="live-dot"></span><strong>327</strong> hombres están viendo este video ahora</div>
+      <div>👍 <strong>5 mil</strong> hombres recomiendan este video</div>
+    </div>
+
+    <p class="sound-tip">🔈 Si el video no tiene sonido, toca la pantalla para activar el audio.</p>
+
+    <!-- ===================== OFERTA (escondida até o delay) ===================== -->
+    <section class="offer esconder">
+      <p class="offer-title">Accede ahora al Truco Mental</p>
+      <p class="price"><small>US$</small>14</p>
+      <p class="price-note">Pago único · Acceso inmediato</p>
+
+      <!-- TROCAR "#" PELO LINK DO CHECKOUT -->
+      <a class="cta" href="#">¡Quiero acceder ahora!</a>
+
+      <p class="secure">🔒 Compra 100% segura</p>
+    </section>
+
+  </main>
+
+  <footer>
+    © <span id="year"></span> — Todos los derechos reservados.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ================= DELAY DO BOTÃO =================
+    // Segundos de VÍDEO até a oferta aparecer (ajustar depois, no momento do pitch).
+    var DELAY_SECONDS = 600;
+
+    function showOffer() {
+      document.querySelectorAll('.esconder').forEach(function (el) {
+        el.style.display = 'block';
+      });
+    }
+
+    // Prévia: abra a página com ?preview=1 para ver a oferta na hora.
+    if (new URLSearchParams(location.search).has('preview')) {
+      showOffer();
+    }
+
+    // Quando o embed do VTurb estiver colado, o player controla o delay
+    // pelo tempo assistido do vídeo (e lembra quem já viu o pitch).
+    var player = document.querySelector('vturb-smartplayer');
+    if (player) {
+      player.addEventListener('player:ready', function () {
+        player.displayHiddenElements(DELAY_SECONDS, ['.esconder'], { persist: true });
+      });
+    }
+  </script>
+</body>
+</html>

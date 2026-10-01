@@ -122,50 +122,18 @@
       color: var(--muted);
     }
 
-    /* ---------- Oferta (aparece após o delay) ---------- */
+    /* ---------- Botão (aparece após o delay) ---------- */
     .esconder { display: none; }
 
     .offer {
-      max-width: 440px;
-      margin: 40px auto 0;
-      padding: 28px 20px;
-      text-align: center;
-      border: 1px solid #222;
-      border-radius: 16px;
-      background: #0b0b0b;
-    }
-
-    .offer-title {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 800;
-      font-size: 18px;
-      text-transform: uppercase;
-    }
-
-    .price {
-      margin-top: 14px;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 900;
-      font-size: 48px;
-      line-height: 1;
-    }
-
-    .price small {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--muted);
-    }
-
-    .price-note {
-      margin-top: 6px;
-      font-size: 13px;
-      color: var(--muted);
+      max-width: 400px;
+      margin: 28px auto 0;
     }
 
     .cta {
       display: block;
-      margin-top: 22px;
       padding: 18px 16px;
+      text-align: center;
       background: var(--green);
       color: #fff;
       text-decoration: none;
@@ -183,12 +151,6 @@
     @keyframes bounce {
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.04); }
-    }
-
-    .secure {
-      margin-top: 14px;
-      font-size: 12px;
-      color: var(--muted);
     }
 
     /* ---------- Rodapé ---------- */
@@ -235,17 +197,11 @@
 
     <p class="sound-tip">🔈 Si el video no tiene sonido, toca la pantalla para activar el audio.</p>
 
-    <!-- ===================== OFERTA (escondida até o delay) ===================== -->
-    <section class="offer esconder">
-      <p class="offer-title">Accede ahora al Truco Mental</p>
-      <p class="price"><small>US$</small>14</p>
-      <p class="price-note">Pago único · Acceso inmediato</p>
-
+    <!-- ===================== BOTÃO (escondido até o delay) ===================== -->
+    <div class="offer esconder">
       <!-- TROCAR "#" PELO LINK DO CHECKOUT -->
       <a class="cta" href="#">¡Quiero acceder ahora!</a>
-
-      <p class="secure">🔒 Compra 100% segura</p>
-    </section>
+    </div>
 
   </main>
 

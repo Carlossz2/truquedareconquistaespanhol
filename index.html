@@ -76,18 +76,6 @@
       background: #111;
     }
 
-    /* Placeholder visível só até o embed do VTurb ser colado */
-    .video-placeholder {
-      aspect-ratio: 9 / 16;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #555;
-      font-size: 14px;
-      border: 2px dashed #333;
-      border-radius: 14px;
-    }
-
     /* ---------- Contadores ---------- */
     .stats {
       margin-top: 18px;
@@ -183,9 +171,7 @@
 
     <!-- ===================== VÍDEO VTURB ===================== -->
     <div class="video-wrap">
-      <!-- COLE AQUI O CÓDIGO EMBED DO VTURB e apague a div .video-placeholder abaixo -->
-
-      <div class="video-placeholder">[ Vídeo VTurb aqui ]</div>
+      <vturb-smartplayer id="vid-6ac19306e8e5b1e7bdba6761" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/7ef49543-6dd0-4cf8-8a90-49107c349e16/players/6ac19306e8e5b1e7bdba6761/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
 
     </div>
     <!-- ======================================================= -->
@@ -227,7 +213,7 @@
       showOffer();
     }
 
-    // Quando o embed do VTurb estiver colado, o player controla o delay
+    // O player do VTurb controla o delay
     // pelo tempo assistido do vídeo (e lembra quem já viu o pitch).
     var player = document.querySelector('vturb-smartplayer');
     if (player) {

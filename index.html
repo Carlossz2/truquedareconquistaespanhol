@@ -6,16 +6,24 @@
   <title>Cómo Reconquistar a Tu Ex con un Simple Truco Mental</title>
   <meta name="robots" content="noindex, nofollow">
 
+  <!-- Velocidade: conexões antecipadas com o VTurb e a fonte -->
+  <link rel="preconnect" href="https://scripts.converteai.net">
+  <link rel="preconnect" href="https://cdn.converteai.net" crossorigin>
+  <link rel="dns-prefetch" href="https://images.converteai.net">
+  <link rel="dns-prefetch" href="https://api.vturb.com.br">
+  <link rel="preload" href="https://scripts.converteai.net/7ef49543-6dd0-4cf8-8a90-49107c349e16/players/6ac19306e8e5b1e7bdba6761/v4/player.js" as="script">
+
+  <!-- Fonte carregada sem bloquear a página (só o peso usado) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap"></noscript>
 
   <style>
     :root {
       --red: #e53935;
       --red-dark: #b71c1c;
-      --green: #16a34a;
-      --green-dark: #15803d;
       --bg: #000;
       --text: #fff;
       --muted: #9e9e9e;
@@ -26,7 +34,7 @@
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: 'Open Sans', Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -35,7 +43,7 @@
       background: linear-gradient(180deg, var(--red) 0%, var(--red-dark) 100%);
       text-align: center;
       padding: 10px 16px;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Montserrat', Arial, sans-serif;
       font-weight: 800;
       font-size: 14px;
       letter-spacing: .3px;
@@ -52,7 +60,7 @@
     .headline {
       margin-top: 56px;
       text-align: center;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Montserrat', Arial, sans-serif;
       font-weight: 800;
       font-size: 22px;
       line-height: 1.35;
@@ -66,14 +74,10 @@
       -webkit-box-decoration-break: clone;
     }
 
-
     /* ---------- Vídeo (VTurb) ---------- */
     .video-wrap {
       max-width: 400px;
       margin: 48px auto 0;
-      border-radius: 14px;
-      overflow: hidden;
-      background: #111;
     }
 
     /* ---------- Contadores ---------- */
@@ -110,37 +114,6 @@
       color: var(--muted);
     }
 
-    /* ---------- Botão (aparece após o delay) ---------- */
-    .esconder { display: none; }
-
-    .offer {
-      max-width: 400px;
-      margin: 28px auto 0;
-    }
-
-    .cta {
-      display: block;
-      padding: 18px 16px;
-      text-align: center;
-      background: var(--green);
-      color: #fff;
-      text-decoration: none;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 800;
-      font-size: 18px;
-      text-transform: uppercase;
-      border-radius: 10px;
-      box-shadow: 0 6px 0 var(--green-dark);
-      animation: bounce 2s infinite;
-    }
-
-    .cta:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--green-dark); }
-
-    @keyframes bounce {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.04); }
-    }
-
     /* ---------- Rodapé ---------- */
     footer {
       margin-top: 72px;
@@ -172,7 +145,6 @@
     <!-- ===================== VÍDEO VTURB ===================== -->
     <div class="video-wrap">
       <vturb-smartplayer id="vid-6ac19306e8e5b1e7bdba6761" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/7ef49543-6dd0-4cf8-8a90-49107c349e16/players/6ac19306e8e5b1e7bdba6761/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
-
     </div>
     <!-- ======================================================= -->
 
@@ -183,44 +155,12 @@
 
     <p class="sound-tip">🔈 Si el video no tiene sonido, toca la pantalla para activar el audio.</p>
 
-    <!-- ===================== BOTÃO (escondido até o delay) ===================== -->
-    <div class="offer esconder">
-      <!-- TROCAR "#" PELO LINK DO CHECKOUT -->
-      <a class="cta" href="#">¡Quiero acceder ahora!</a>
-    </div>
-
   </main>
 
   <footer>
     © <span id="year"></span> — Todos los derechos reservados.
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // ================= DELAY DO BOTÃO =================
-    // Segundos de VÍDEO até a oferta aparecer (9min50s = 590s).
-    var DELAY_SECONDS = 590; // 9min50s
-
-    function showOffer() {
-      document.querySelectorAll('.esconder').forEach(function (el) {
-        el.style.display = 'block';
-      });
-    }
-
-    // Prévia: abra a página com ?preview=1 para ver a oferta na hora.
-    if (new URLSearchParams(location.search).has('preview')) {
-      showOffer();
-    }
-
-    // O player do VTurb controla o delay
-    // pelo tempo assistido do vídeo (e lembra quem já viu o pitch).
-    var player = document.querySelector('vturb-smartplayer');
-    if (player) {
-      player.addEventListener('player:ready', function () {
-        player.displayHiddenElements(DELAY_SECONDS, ['.esconder'], { persist: true });
-      });
-    }
-  </script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

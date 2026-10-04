@@ -42,11 +42,11 @@
     .top-bar {
       background: linear-gradient(180deg, var(--red) 0%, var(--red-dark) 100%);
       text-align: center;
-      padding: 10px 16px;
+      padding: 8px 12px;
       font-family: 'Montserrat', Arial, sans-serif;
       font-weight: 800;
-      font-size: 14px;
-      letter-spacing: .3px;
+      font-size: 12px;
+      line-height: 1.35;
       box-shadow: 0 4px 18px rgba(229, 57, 53, .45);
     }
 
@@ -58,12 +58,12 @@
 
     /* ---------- Headline ---------- */
     .headline {
-      margin-top: 56px;
+      margin: 20px auto 0;
       text-align: center;
       font-family: 'Montserrat', Arial, sans-serif;
       font-weight: 800;
-      font-size: 22px;
-      line-height: 1.35;
+      font-size: clamp(17px, 4.9vw, 24px);
+      line-height: 1.3;
       text-transform: uppercase;
     }
 
@@ -75,10 +75,17 @@
     }
 
     /* ---------- Vídeo (VTurb) ---------- */
+    /* O vídeo (9:16) cabe inteiro na tela: largura limitada pela altura disponível */
     .video-wrap {
-      max-width: 400px;
-      margin: 48px auto 0;
+      --above: 190px; /* espaço ocupado acima do vídeo + respiro embaixo */
+      width: min(100%, 400px, calc((100vh - var(--above)) * 9 / 16));
+      width: min(100%, 400px, calc((100svh - var(--above)) * 9 / 16));
+      min-width: 260px;
+      max-width: 100%;
+      margin: 16px auto 0;
     }
+
+    .video-wrap vturb-smartplayer { max-width: 100% !important; }
 
     /* ---------- Contadores ---------- */
     .stats {
@@ -125,8 +132,9 @@
     }
 
     @media (min-width: 768px) {
-      .top-bar { font-size: 15px; }
-      .headline { font-size: 26px; }
+      .top-bar { padding: 10px 16px; font-size: 14px; }
+      .headline { margin-top: 36px; }
+      .video-wrap { --above: 250px; margin-top: 28px; }
     }
   </style>
 </head>
@@ -137,8 +145,8 @@
   <main class="container">
 
     <h1 class="headline">
-      <span class="hl">Cómo reconquistar a tu ex</span>
-      o a la mujer que amas con un
+      <span class="hl">Cómo reconquistar a tu ex</span><br>
+      o a la mujer que amas con un<br>
       <span class="hl">simple truco mental</span>
     </h1>
 
